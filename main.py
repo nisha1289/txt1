@@ -22,7 +22,7 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "6777157028:AAFQGhd28KK0yjmCyP6WtmUTYuseHGm71Q0",
+             bot_token= "6738499753:AAGUMdANwUVOJN-rvVDk2GaBy0POlQLHNXw",
              api_id= 27862677,
              api_hash= "e343ce2c81b2b6c2c0d6bee58284e3bd")
 auth_users = [1818141962,-1001855559473]
@@ -38,7 +38,7 @@ async def restart_handler(_, m):
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-@bot.on_message(filters.command(["kishan"])&(filters.chat(auth_users)))
+@bot.on_message(filters.command(["viky"])&(filters.chat(auth_users)))
 async def txt_handler(bot: Client, m: Message):
     editable = await m.reply_text(f"**Hello Bruh **I am Text Downloader Bot**. I can download videos from **text** file one by one.**\n\nDeveloper** : KISHAN😎BHAI**")
     input: Message = await bot.listen(editable.chat.id,filters.user(m.from_user.id))
